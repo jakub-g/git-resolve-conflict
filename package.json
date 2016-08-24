@@ -1,6 +1,6 @@
 {
   "name": "merge-file-ours-poc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "merge-file-ours proof of concept\r ================================",
   "main": "index.js",
   "scripts": {
