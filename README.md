@@ -210,6 +210,31 @@ Let's merge
 
 
     me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop +|MERGING)
+    $ git diff --cached
+    diff --git a/added-in-master.txt b/added-in-master.txt
+    new file mode 100644
+    index 0000000..9cef8af
+    --- /dev/null
+    +++ b/added-in-master.txt
+    @@ -0,0 +1 @@
+    +added in master
+    diff --git a/package.json b/package.json
+    index 75c469b..03f513b 100644
+    --- a/package.json
+    +++ b/package.json
+    @@ -6,6 +6,10 @@
+       "scripts": {
+         "test": "echo \"Error: no test specified\" && exit 1"
+       },
+    +  "dependencies": {
+    +    "foobar": "1.0.0",
+    +    "quux": "2.0.0"
+    +  },
+       "author": "",
+       "license": "ISC"
+     }
+
+    me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop +|MERGING)
     $ git status
     On branch merge_master_to_develop
     All conflicts fixed but you are still merging.
@@ -218,6 +243,7 @@ Let's merge
     Changes to be committed:
 
             new file:   added-in-master.txt
+            modified:   package.json
 
 
     me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop +|MERGING)
