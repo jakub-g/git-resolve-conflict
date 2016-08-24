@@ -20,7 +20,7 @@ being changed in both branches.
 
 How to easily **resolve the merge conflict** in an **automated manner** (script) in such a situation?
 
-**TL;DR** we need to use [git-merge-file](https://git-scm.com/docs/git-merge-file) but its API is not easy. Hence I wrote a wrapper `./git-resolve-conflict.sh` around it (I used temp files instead of process substitution to make it msys/mingw-friendly). 
+**TL;DR** we need to use [git-merge-file](https://git-scm.com/docs/git-merge-file) but its API is not easy. Hence I wrote a wrapper `./git-resolve-conflict.sh` around it (I used temp files instead of process substitution to make it msys/mingw-friendly).
 
 The usual suspects
 ==================
