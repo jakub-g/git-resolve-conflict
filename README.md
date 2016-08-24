@@ -1,4 +1,4 @@
-git-resolve-conflict <strategy> <filename>: proof of concept
+`git-resolve-conflict <strategy> <filename>`
 ===========================================================
 
 Say you have multiple git branches and you want to merge
@@ -24,7 +24,7 @@ The usual suspects
 
 - `git merge -Xours`: this will resolve ALL conflicts in ALL files using the same strategy. This might be too much.
 (For instance, I might want to have an automatic merging script, which can do a successful conflict resolution
-only if `foobar.json` is the only file that was modified; on any other files modified, the merge should fail)
+only if `foobar.json` is *the only file that was modified*; on any other files modified, the merge should fail)
 
 - `git checkout --ours filename.txt`: this will **discard** ALL the changes from `theirs` version, which is brutal.
 There might be some valid, non-conflicting changes that will be discarded this way.
@@ -178,7 +178,7 @@ Let's merge
       "license": "ISC"
     }
 
-`git-resolve-conflict` tp the rescue
+`git-resolve-conflict` to the rescue
 ====================================
 
     ######################################################################################
