@@ -1,11 +1,10 @@
 {
-  "name": "merge-file-ours-poc",
+  "name": "git-resolve-conflict",
   "version": "1.0.0",
-  "description": "merge-file-ours proof of concept\r ================================",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  "description": "git-resolve-conflict",
+  "author": "Jakub Gieryluk <jakub.g.opensource@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "git-resolve-conflict": "./bin/git-resolve-conflict"
+  }
 }

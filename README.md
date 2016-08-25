@@ -2,6 +2,8 @@
 ===========================================================
 
 > Resolve merge conflict in one file, using given strategy (--ours, --theirs, --union)
+>
+>     git-resolve-conflict --ours package.json
 
 Say you have multiple git branches and you want to merge
 between them, and always resolve conflicts **in a particular file** with a **fixed strategy**
@@ -34,7 +36,7 @@ There might be some valid, non-conflicting changes that will be discarded this w
 
 - What we need is something like `git-resolve-conflict --ours filename.txt`
 
-**Check `./git-resolve-conflict.sh` in this repo!**
+**Check `./lib/git-resolve-conflict.sh` in this repo!**
 
 
 Initial situation
