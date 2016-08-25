@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source $DIR/../lib/git-resolve-conflict.sh
+
+if [ -z "$1" ] ; then
+  echo "Usage:   $(basename "$0") <file>"
+fi
+git-resolve-conflict --union "$@"

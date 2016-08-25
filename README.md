@@ -3,13 +3,19 @@
 
 > Resolve merge conflict in one file, using given strategy (--ours, --theirs, --union)
 >
->     git-resolve-conflict --ours package.json
+>     git resolve-conflict --ours package.json
+>     git resolve-conflict --theirs package.json
+>     git resolve-conflict --union package.json
+>
+>     git resolve-ours package.json
+>     git resolve-theirs package.json
+>     git resolve-union package.json
 
 Installation
 -----------
 
-  - copy `/lib/git-resolve-conflict.sh` to your `.bashrc`, or
-  - `npm install -g git-resolve-conflict`
+  - copy `/lib/git-resolve-conflict.sh` to your `.bashrc` (this adds just `git resolve-conflict`)
+  - or `npm install -g git-resolve-conflict` (this also adds 3 other helpers)
 
  [![Get it on npm](https://nodei.co/npm/git-resolve-conflict.png?compact=true)](https://www.npmjs.org/package/git-resolve-conflict)
 
