@@ -1,9 +1,13 @@
 {
   "name": "git-resolve-conflict",
   "version": "1.0.0",
-  "description": "git-resolve-conflict",
+  "description": "Resolve git conflict in a given file, using given strategy (--ours, --theirs, --union)",
   "author": "Jakub Gieryluk <jakub.g.opensource@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakub-g/git-resolve-conflict.git"
+  },
   "bin": {
     "git-resolve-conflict": "./bin/git-resolve-conflict"
   }
