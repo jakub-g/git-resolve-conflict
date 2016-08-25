@@ -5,6 +5,25 @@
 >
 >     git-resolve-conflict --ours package.json
 
+Installation
+-----------
+
+  - copy `/lib/git-resolve-conflict.sh` to your `.bashrc`, or
+  - `npm install -g git-resolve-conflict`
+
+ [![Get it on npm](https://nodei.co/npm/git-resolve-conflict.png?compact=true)](https://www.npmjs.org/package/git-resolve-conflict)
+
+TL;DR
+=====
+
+It's just a tiny wrapper around [git-merge-file](https://git-scm.com/docs/git-merge-file) to simplify the API. See `./lib/git-resolve-conflict.sh`.
+
+I used temp files instead of process substitution to make it msys/mingw-friendly.
+
+
+Description
+===========
+
 Say you have multiple git branches and you want to merge
 between them, and always resolve conflicts **in a particular file** with a **fixed strategy**
 (say `ours`).
@@ -22,7 +41,6 @@ being changed in both branches.
 
 How to easily **resolve the merge conflict** in an **automated manner** (script) in such a situation?
 
-**TL;DR** we need to use [git-merge-file](https://git-scm.com/docs/git-merge-file) but its API is not easy. Hence I wrote a wrapper `./git-resolve-conflict.sh` around it (I used temp files instead of process substitution to make it msys/mingw-friendly).
 
 The usual suspects
 ==================
