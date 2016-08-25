@@ -18,8 +18,13 @@ TL;DR
 
 It's just a tiny wrapper around [git-merge-file](https://git-scm.com/docs/git-merge-file) to simplify the API. See `./lib/git-resolve-conflict.sh`.
 
+It's better than `git merge -Xours` because that would resolve conflicts for all files. Here you can resolve conflict for just one file.
+
+It's better than `git checkout --ours package.json` because that would lose changes from `theirs` even if they are not conflicted.
+
 I used temp files instead of process substitution to make it msys/mingw-friendly.
 
+See also http://stackoverflow.com/q/39126509/245966
 
 Description
 ===========
