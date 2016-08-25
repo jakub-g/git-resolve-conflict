@@ -1,0 +1,17 @@
+* text=auto
+
+*.html eol=lf
+*.js   eol=lf
+*.json eol=lf
+*.less eol=lf
+*.md   eol=lf
+*.svg  eol=lf
+*.xml  eol=lf
+*.sh   eol=lf
+*.scss eol=lf
+
+*.bat  eol=crlf
+
+*.png  binary
+*.jpg  binary
+*.gif  binary
