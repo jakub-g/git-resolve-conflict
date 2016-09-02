@@ -8,10 +8,18 @@
     "type": "git",
     "url": "https://github.com/jakub-g/git-resolve-conflict.git"
   },
+  "bugs": {
+    "url": "https://github.com/jakub-g/git-resolve-conflict/issues"
+  },
   "bin": {
     "git-resolve-conflict": "./bin/git-resolve-conflict",
     "git-resolve-ours": "./bin/git-resolve-ours",
     "git-resolve-theirs": "./bin/git-resolve-theirs",
     "git-resolve-union": "./bin/git-resolve-union"
-  }
+  },
+  "keywords": [
+    "git",
+    "conflict",
+    "merge"
+  ]
 }
