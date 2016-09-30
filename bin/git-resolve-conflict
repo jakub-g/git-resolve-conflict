@@ -11,4 +11,5 @@ else
 fi
 
 source $DIR/../lib/git-resolve-conflict.sh
+
 git-resolve-conflict "$@"
