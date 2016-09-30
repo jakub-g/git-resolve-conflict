@@ -7,9 +7,9 @@ if type readlink > /dev/null 2>&1 ; then
   DIR="${DIR1}/${DIR2}"
 else
   # on windows/mingw there's no readlink, but npm install -g creates a special intermediary file
-  DIR=${DIR1}
+  DIR="${DIR1}"
 fi
 
-source $DIR/../lib/git-resolve-conflict.sh
+source "${DIR}/../lib/git-resolve-conflict.sh"
 
 git-resolve-conflict "$@"
