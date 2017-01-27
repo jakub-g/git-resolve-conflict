@@ -19,13 +19,16 @@ git-resolve-conflict() {
     return
   fi
 
-  # grep -Fxq: match string (F), exact (x), quiet (exit with code 0/1) (q)
   if [ ! -f "$FILE_PATH" ]; then
     echo "$FILE_PATH does not exist; aborting."
     return
   fi
 
-  if ! git diff --name-only --diff-filter=U | grep -Fxq "$FILE_PATH"; then
+  # remove leading ./ if present, to match the output of git diff --name-only
+  # (otherwise if user input is './filename.txt' we would not match 'filename.txt')
+  FILE_PATH_FOR_GREP=${FILE_PATH#./}
+  # grep -Fxq: match string (F), exact (x), quiet (exit with code 0/1) (q)
+  if ! git diff --name-only --diff-filter=U | grep -Fxq "$FILE_PATH_FOR_GREP"; then
     echo "$FILE_PATH is not in conflicted state; aborting."
     return
   fi
