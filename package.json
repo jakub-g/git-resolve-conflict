@@ -1,6 +1,6 @@
 {
   "name": "git-resolve-conflict",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Resolve git conflict in a given file, using given strategy (--ours, --theirs, --union)",
   "author": "Jakub Gieryluk <jakub.g.opensource@gmail.com>",
   "license": "MIT",
