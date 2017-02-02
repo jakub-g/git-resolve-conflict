@@ -11,6 +11,13 @@
 >     git resolve-theirs package.json
 >     git resolve-union package.json
 
+Why would you need it
+--------------------
+
+To be able to resolve certain kinds of well-defined, trivial merge conflicts, without opening mergetool.
+
+This is particularly useful in automated merge scripts (for example, Jenkins jobs).
+
 Installation
 -----------
 
@@ -18,6 +25,8 @@ Installation
   - or `npm install -g git-resolve-conflict` (this also adds 3 other helpers)
 
  [![Get it on npm](https://nodei.co/npm/git-resolve-conflict.png?compact=true)](https://www.npmjs.org/package/git-resolve-conflict)
+ 
+npm installation is the recommended way, so that you can easily get updates in the future.
 
 TL;DR
 =====
