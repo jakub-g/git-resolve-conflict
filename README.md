@@ -14,12 +14,12 @@
 Why would you need it
 --------------------
 
-To be able to resolve certain kinds of well-defined, trivial merge conflicts, without opening mergetool.
+To be able to resolve certain well-defined types of merge conflicts, without opening mergetool.
 
-This is particularly useful in automated merge scripts (for example, Jenkins jobs).
+This is particularly useful in automated merge scripts (for example, Jenkins jobs), or if you have large number of well-defined merges to resolve.
 
 Installation
------------
+------------
 
   - copy `/lib/git-resolve-conflict.sh` to your `.bashrc` (this adds just `git resolve-conflict`)
   - or `npm install -g git-resolve-conflict` (this also adds 3 other helpers)
@@ -80,37 +80,30 @@ There might be some valid, non-conflicting changes that will be discarded this w
 Initial situation
 =================
 
-    me@mymachine /d/gh/merge-file-ours-poc (base)
     $ git log --oneline base
     be4abab add git-resolve-conflict script
-    0bb70f5 npm init
-    41c7b17 init
+    ...
 
-    me@mymachine /d/gh/merge-file-ours-poc (base)
     $ git log --oneline master
     0ea4d05 1.0.2
     d94a1dc change in master: add dependencies
     386ae99 1.0.1
     6160dea change in master
     be4abab add git-resolve-conflict script
-    0bb70f5 npm init
-    41c7b17 init
+    ...
 
-    me@mymachine /d/gh/merge-file-ours-poc (base)
     $ git log --oneline develop
     f2fefc6 2.0.1
     b8c66c9 change in develop
     263aa5f 2.0.0
     be4abab add git-resolve-conflict script
-    0bb70f5 npm init
-    41c7b17 init
+    ...
 
 Goal
 =================
 
 We want to merge `develop` into `master` and auto-resolve conflicts in `package.json` using strategy `--ours`
 
-    me@mymachine /d/gh/merge-file-ours-poc (base)
     $ git log --oneline merge_master_to_develop
     7cde612 Merge branch 'master' into merge_master_to_develop
     0ea4d05 1.0.2
@@ -121,16 +114,13 @@ We want to merge `develop` into `master` and auto-resolve conflicts in `package.
     386ae99 1.0.1
     6160dea change in master
     be4abab add git-resolve-conflict script
-    0bb70f5 npm init
-    41c7b17 init
+    ...
 
 
 Beware
 ======
 
 We have changes in `master` that would be lost on merge if we did a brutal `git checkout --ours package.json`
-
-    me@mymachine /d/gh/merge-file-ours-poc (develop)
 
     $ git show master^
     commit d94a1dc5ff0aba1c0d9c2a3dd8f9bec3147578d2
@@ -293,7 +283,7 @@ Let's merge
     $ git commit
     [merge_master_to_develop aed5278] Merge branch 'master' into merge_master_to_develop
 
-Everything is fine, merge resolved correctly
+Final situation
 ============================================
 
     me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop)
@@ -313,3 +303,5 @@ Everything is fine, merge resolved correctly
       "author": "",
       "license": "ISC"
     }
+
+Everything is fine, merge resolved correctly!
