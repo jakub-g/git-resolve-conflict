@@ -55,7 +55,7 @@ which is merged to `master` every few weeks.
 But then you find our bugs at regression testing stage, you fix them in `master`, and you build.
 In the meantime, you also build `develop` separately. Each build bumps `version` field in `package.json`.
 
-Sice those branches can be built separately, a file like `package.json`
+Since those branches can be built separately, a file like `package.json`
 will be modified in both branches, and there'll be a merge conflict due to `version` field
 being changed in both branches.
 
