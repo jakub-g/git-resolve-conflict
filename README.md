@@ -117,8 +117,8 @@ We want to merge `develop` into `master` and auto-resolve conflicts in `package.
     ...
 
 
-Beware
-======
+We need to be cautious
+======================
 
 We have changes in `master` that would be lost on merge if we did a brutal `git checkout --ours package.json`
 
@@ -147,26 +147,20 @@ We have changes in `master` that would be lost on merge if we did a brutal `git 
 
 
 Let's merge
-==============
+===========
 
-    me@mymachine /d/gh/merge-file-ours-poc (develop)
     $ git checkout develop
     Switched to branch 'develop'
 
-
-    me@mymachine /d/gh/merge-file-ours-poc (develop)
     $ git checkout -b merge_master_to_develop
     Switched to a new branch 'merge_master_to_develop'
 
-
-    me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop)
     $ git merge master
     Auto-merging package.json
     CONFLICT (content): Merge conflict in package.json
     Automatic merge failed; fix conflicts and then commit the result.
 
-
-    me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop *+|MERGING)
+    me@mymachine /d/git/merge-file-ours-poc (merge_master_to_develop *+|MERGING)
     $ git diff
     diff --cc package.json
     index 75c469b,f709434..0000000
@@ -186,8 +180,7 @@ Let's merge
         "main": "index.js",
         "scripts": {
 
-
-    me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop *+|MERGING)
+    me@mymachine /d/git/merge-file-ours-poc (merge_master_to_develop *+|MERGING)
     $ cat package.json
     {
       "name": "merge-file-ours-poc",
@@ -224,8 +217,6 @@ Let's merge
     me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop *+|MERGING)
     $ source ./git-resolve-conflict.sh
 
-
-    me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop *+|MERGING)
     $ git-resolve-conflict
     Usage:   git-resolve-conflict <strategy> <file>
 
@@ -233,16 +224,10 @@ Let's merge
     Example: git-resolve-conflict --union package.json
     Example: git-resolve-conflict --theirs package.json
 
-
-    me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop *+|MERGING)
     $ git-resolve-conflict --ours package.json
 
-
-    me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop +|MERGING)
     $ git diff
 
-
-    me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop +|MERGING)
     $ git diff --cached
     diff --git a/added-in-master.txt b/added-in-master.txt
     new file mode 100644
@@ -267,7 +252,6 @@ Let's merge
        "license": "ISC"
      }
 
-    me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop +|MERGING)
     $ git status
     On branch merge_master_to_develop
     All conflicts fixed but you are still merging.
@@ -278,8 +262,6 @@ Let's merge
             new file:   added-in-master.txt
             modified:   package.json
 
-
-    me@mymachine /d/gh/merge-file-ours-poc (merge_master_to_develop +|MERGING)
     $ git commit
     [merge_master_to_develop aed5278] Merge branch 'master' into merge_master_to_develop
 
@@ -305,3 +287,6 @@ Final situation
     }
 
 Everything is fine, merge resolved correctly!
+
+- version is 2.0.1 (taken from `develop`)
+- dependencies are not lost (taken from `master`)
