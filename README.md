@@ -21,7 +21,7 @@ This is particularly useful in automated merge scripts (for example, Jenkins job
 Installation
 ------------
 
-  - copy `/lib/git-resolve-conflict.sh` to your `.bashrc` (this adds just `git resolve-conflict`)
+  - copy [`/lib/git-resolve-conflict.sh`](https://github.com/jakub-g/git-resolve-conflict/blob/base/lib/git-resolve-conflict.sh) to your `.bashrc` (this adds just `git resolve-conflict`)
   - or `npm install -g git-resolve-conflict` (this also adds 3 other helpers)
 
  [![Get it on npm](https://nodei.co/npm/git-resolve-conflict.png?compact=true)](https://www.npmjs.org/package/git-resolve-conflict)
