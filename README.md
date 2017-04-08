@@ -1,7 +1,7 @@
 `git-resolve-conflict <strategy> <filename>`
 ===========================================================
 
-> Resolve merge conflict in one file, using given strategy (--ours, --theirs, --union)
+> Resolve merge conflict in just one file, using given strategy (--ours, --theirs, --union)
 >
 >     git resolve-conflict --ours package.json
 >     git resolve-conflict --theirs package.json
@@ -65,16 +65,16 @@ How to easily **resolve the merge conflict** in an **automated manner** (script)
 The usual suspects
 ==================
 
-- `git merge -Xours`: this will resolve ALL conflicts in ALL files using the same strategy. This might be too much.
-(For instance, I might want to have an automatic merging script, which can do a successful conflict resolution
+- `git merge -Xours`: that would resolve *ALL conflicts* in *ALL files* using the same strategy. This might be too much.
+(For instance, you might want to have an automatic merging script, which can do a successful conflict resolution
 only if `foobar.json` is *the only file that was modified*; on any other files modified, the merge should fail)
 
-- `git checkout --ours filename.txt`: this will **discard** ALL the changes from `theirs` version, which is brutal.
-There might be some valid, non-conflicting changes that will be discarded this way.
+- `git checkout --ours filename.txt`: that would ***discard** ALL the changes* from `theirs` version, which is brutal.
+There might be some valid, non-conflicting changes that would be discarded this way.
 
 - What we need is something like `git-resolve-conflict --ours filename.txt`
 
-**Check `./lib/git-resolve-conflict.sh` in this repo!**
+**This is what `./lib/git-resolve-conflict.sh` from this repo provides.**
 
 Details
 =======
