@@ -74,7 +74,7 @@ being changed in both branches.
 How to easily **resolve the merge conflict** in an **automated manner** (script) in such a situation?
 
 
-The usual suspects
+git built-ins that do not solve the problem
 ==================
 
 - `git merge -Xours`: that would resolve *ALL conflicts* in *ALL files* using the same strategy. This might be too much.
