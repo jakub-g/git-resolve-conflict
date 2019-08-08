@@ -28,6 +28,18 @@ Installation
  
 npm installation is the recommended way, so that you can easily get updates in the future.
 
+FAQ
+---
+
+- *Q: Why no updates in 3 years?*
+- A: Because _it works™_. It's feature-complete.
+
+- *Q: Does it work on Windows?*
+- A: Yep, but it'a shell script, so you need a unix-y shell. I'm using it with git bash and it works well.
+
+- *Q: Why you distribute through npm?*
+- A: Just to make it easier to install if you happen to have node. The script itself is shell.
+
 TL;DR
 =====
 
