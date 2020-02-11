@@ -4,7 +4,7 @@ git-resolve-conflict() {
   STRATEGY="$1"
   FILE_PATH="$2"
 
-  if [ "$1" == "--version" ]; then
+  if [ "$1" = "--version" ]; then
     DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
     cat $DIR/../package.json | grep version | sed 's/,//'
     return
