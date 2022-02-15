@@ -23,8 +23,8 @@ Things to be aware of
 
 Note though, this is just a dumb text-based merge resolution script; if you're unlucky, the merged file might be syntactically incorrect.
 
-For example: when using `--ours` strategy on `package.json` where both sides added an entry at the end, the result will be
-two blocks added without trailing comma between them.
+For example: when using `--ours` strategy on `package.json` where both sides added an entry at the end of `dependencies` or `scripts` array,
+the result will be two blocks added without trailing comma between them (hence invalid JSON).
 
 Installation
 ------------
