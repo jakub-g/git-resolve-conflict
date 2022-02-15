@@ -18,6 +18,14 @@ To be able to resolve certain well-defined types of merge conflicts, without ope
 
 This is particularly useful in automated merge scripts (for example, Jenkins jobs), or if you have large number of well-defined merges to resolve.
 
+Things to be aware of
+------------
+
+Note though, this is just a dumb text-based merge resolution script; if you're unlucky, the merged file might be syntactically incorrect.
+
+For example: when using `--ours` strategy on `package.json` where both sides added an entry at the end, the result will be
+two blocks added without trailing comma between them.
+
 Installation
 ------------
 
