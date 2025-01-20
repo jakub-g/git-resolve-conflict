@@ -39,8 +39,8 @@ npm installation is the recommended way, so that you can easily get updates in t
 FAQ
 ---
 
-- *Q: Why no updates in 3 years?*
-- A: Because _it works™_. It's feature-complete.
+- *Q: Why no updates in N years?*
+- A: Because it's feature-complete.
 
 - *Q: Does it work on Windows?*
 - A: Yep, but it'a shell script, so you need a unix-y shell. I'm using it with git bash and it works well.
